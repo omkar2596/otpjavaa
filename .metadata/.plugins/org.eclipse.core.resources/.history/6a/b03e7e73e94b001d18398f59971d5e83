@@ -1,0 +1,28 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Program {
+
+	public static void main(String[] args) {
+      
+		try 
+		{
+			FileOutputStream fileOutputStrem = new FileOutputStream();
+			
+					String data ="Welcome to yhr file application,this is the first created..";
+		        	fileOutputStrem.write(data.getBytes());
+		        	System.out.println("file write");
+		}
+		catch(FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,13 @@
+
+public class otpThread implements Runnable {
+
+	@Override
+	public void run() {
+		while(true)
+		{
+			Thread.sleep(1000);
+		}
+
+	}
+
+}

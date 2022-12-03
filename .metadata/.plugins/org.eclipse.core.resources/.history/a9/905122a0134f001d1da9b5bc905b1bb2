@@ -1,0 +1,21 @@
+package omassignment;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Program10 {  
+    public static void main(String[] args) {  
+        List<String> l = new ArrayList<String>();  
+        l.add("Mango");  
+        l.add("Banana");  
+        l.add("Mango");  
+        l.add("Apple");  
+        System.out.println("Before reverse");  
+        System.out.println(l.toString());  
+          
+        Collections.reverse(l);  
+        System.out.println("After reverse");  
+        System.out.println(l);  
+    }  
+}

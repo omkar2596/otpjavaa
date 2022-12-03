@@ -1,0 +1,22 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		increment();
+		decrement();
+		
+		while(true)
+			System.out.println("Main");
+
+	}
+	static void increment()
+	{
+		while(true)
+			System.out.println("increment");
+	}
+	static void decrement()
+	{
+		System.out.println("decrement");
+	}
+
+}

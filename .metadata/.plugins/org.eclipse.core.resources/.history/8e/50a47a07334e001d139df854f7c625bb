@@ -1,0 +1,18 @@
+
+public class decrementThread implements Runnable {
+
+	@Override
+	public void run() {
+		try {
+			while(true)
+			{
+				System.out.println("increment");
+				Thread.sleep(20);
+			}
+		}catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

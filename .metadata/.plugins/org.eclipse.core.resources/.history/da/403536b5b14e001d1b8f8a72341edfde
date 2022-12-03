@@ -1,0 +1,15 @@
+
+public class otpThread implements Runnable {//RUNNABLE PREDEFINE
+
+	@Override
+	public void run() {//I THINK runnable varun 'run 'zala
+		char [] vowels = {'A','E','I','O','U'};
+		while(true)
+		{
+			Math.random()*
+			Thread.sleep(1000);
+		}
+
+	}
+
+}

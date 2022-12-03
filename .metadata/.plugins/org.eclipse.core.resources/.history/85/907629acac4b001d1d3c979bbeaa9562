@@ -1,0 +1,21 @@
+package cdac.in;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Program1 {
+
+	public static void main(String[] args) {
+
+        try {
+        	File objFile = new File("f:\\new folder\\first.txt");
+    		objFile.createNewFile();
+    		
+    		System.out.println("file created");
+        }
+        catch(IOException e) {
+        	e.printStackTrace();
+        }
+	}
+
+}

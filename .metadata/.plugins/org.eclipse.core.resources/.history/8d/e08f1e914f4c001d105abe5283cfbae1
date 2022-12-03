@@ -1,0 +1,15 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+
+public class Program {
+
+	public static void main(String[] args) {
+	     FileInputStream fileInputStream = null; //file ko read karney key liye
+	     FileOutputStream fileOutputStream = null;//file ko'write'krney key liye
+
+	}
+
+}

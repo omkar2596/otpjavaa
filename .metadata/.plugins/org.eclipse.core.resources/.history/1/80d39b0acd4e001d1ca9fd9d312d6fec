@@ -1,0 +1,39 @@
+package employe.in;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner scanner = null;
+		scanner = new Scanner(System.in);
+		
+		System.out.println("Enter the name");
+		String name = scanner.next();
+		
+		System.out.println("Enter address");
+		String address = scanner.next();
+		
+		System.out.println("enter age");
+		int age =  scanner.nextInt();
+		
+		System.out.println("enter the gender");
+		boolean gender = scanner.nextBoolean();
+		
+		System.out.println("enter salary");
+		float salary = scanner.nextFloat();
+		
+		System.out.println("enter the hra");
+		float hra = scanner.nextFloat();
+		
+		Manager objManager = new Manager(name,address,age,gender,salary,hra);
+		 scanner.close();
+		
+	}finally {
+		
+		
+		
+		
+	}
+
+}

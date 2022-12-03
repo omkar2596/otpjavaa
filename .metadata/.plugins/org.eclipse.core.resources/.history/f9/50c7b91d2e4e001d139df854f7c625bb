@@ -1,0 +1,23 @@
+
+
+public class Program1 {
+
+	public static void main(String[] args) {
+		increment();//increment call infinite loop
+		decrement();
+		
+		while(true)
+			System.out.println("Main");
+
+	}
+	static void increment()
+	{
+		for(int iTmp=0; iTmp<100;iTmp++ )
+			System.out.println("increment");
+	}
+	static void decrement()
+	{
+		System.out.println("decrement");
+	}
+
+}

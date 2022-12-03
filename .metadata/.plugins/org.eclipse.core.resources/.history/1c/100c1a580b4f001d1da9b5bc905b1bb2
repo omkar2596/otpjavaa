@@ -1,0 +1,20 @@
+package omassignment;
+
+import java.util.*;
+public class Program4 {
+public static void main(String[] args) {
+// Creae a list and add some colors to the list
+List<String> listStrings = new ArrayList<String>();
+listStrings.add("Red");
+listStrings.add("Green");
+listStrings.add("Orange");
+listStrings.add("White");
+listStrings.add("Black");
+
+System.out.println(listStrings);
+// Update the third element with "Yellow"
+listStrings.set(2, "Yellow");
+ // Print the list again
+System.out.println(listStrings);
+}
+}

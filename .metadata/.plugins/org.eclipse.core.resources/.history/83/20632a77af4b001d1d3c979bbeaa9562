@@ -1,0 +1,29 @@
+package cdac.in;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Program4 {
+
+	public static void main(String[] args) {
+		File objFile = new File("F:\\Images");
+		
+		String [] fileNames = objFile.list();
+		
+		for(String name : fileNames)
+			System.out.println(name);
+		
+	     try {
+	        	File objFile1 = new File("f:\\new folder\\first.txt");//jey apn locaton use krnar titey folder creat or delete kru shkto
+	    		//objFile.createNewFile();                            //file creat nahi zali ki ;catch'houn expection run honar
+	    		objFile1.delete();	    		
+	    		System.out.println("file deleted");
+	        }
+	        catch(Exception e) {
+	        	e.printStackTrace();
+	
+
+	}
+
+}
+	}

@@ -1,0 +1,21 @@
+package cdac.in;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Program1 { //creat file example
+
+	public static void main(String[] args) {
+
+        try {
+        	File objFile = new File("f:\\new folder\\first.txt");//jey apn locaton use krnar titey folder creat or delete kru shkto
+    		objFile.createNewFile();//file creat nahi zali ki ;catch'houn expection run honar
+    		
+    		System.out.println("file created");
+        }
+        catch(IOException e) {
+        	e.printStackTrace();
+        }
+	}
+
+}

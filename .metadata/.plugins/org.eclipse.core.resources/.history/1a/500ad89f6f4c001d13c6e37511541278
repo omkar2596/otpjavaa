@@ -1,0 +1,14 @@
+import java.io.*;
+
+public class Program2 {
+
+	public static void main(String[] args) {
+		
+		DataOutputStream dataOutputStream =null;
+		 FileOutputStream fileOutputStream = null;//file ko'write'krney key liye
+	     
+		 fileOutputStream = new FileOutputStream("F:\\New folder\\first1.txt");
+		dataOutputStream = new DataOutputSt		 
+	}
+
+}

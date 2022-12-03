@@ -1,0 +1,184 @@
+	//only see this program not run logic wise properly
+//read
+//writw
+// readUsingDIS
+// writeUsingDIS
+
+import java.io.*;
+
+public class Program4 {
+
+	private static char[] age;
+	private static char[] salary;
+	public static void main(String[] args)
+	{
+		DataInputStream  dataInputStream=null;
+		FileInputStream  fileInputStream=null;
+		try
+		{
+			fileInputStream = new FileInputStream ("F:\\New folder\\demo.txt");
+			dataInputStream = new DataInputStream(fileInputStream);
+			
+			String name = dataInputStream.readUTF();
+			int age =dataInputStream.readInt();
+			float salary = dataInputStream.readFloat();
+			
+			System.out.println(name);
+			System.out.println(age);
+			System.out.println(salary);
+		}
+		catch (FileNotFoundException e)//auto generate catch block
+		{
+			e.printStackTrace();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		   {
+		   	try
+		   	{
+		   		if(dataInputStream!=null)
+		   			dataInputStream.close();
+		   			
+		   	    if(fileInputStream!=null)
+		   				fileInputStream.close();	
+		   	}
+		   	catch (IOException e)
+		   	{
+		   	e.printStackTrace();	
+		   	}
+   }
+		
+		
+		
+		
+	}
+	
+	public static void readUsingDIS() {//writeUsingDIS VAPRLEY
+	DataInputStream dataInputStream =null;
+	 FileInputStream fileInputStream = null;//file ko'write'krney key liye
+  try {  
+	 fileInputStream = new FileInputStream("F:\\New folder\\demo.txt");//any location you want
+	dataInputStream = new DataInputStream(fileInputStream);//data jo convert ho jayega usko hum 'fileoutputstream 'mey rakegey		 
+  
+	String name = dataInputStream.readUTF();
+	dataInputStream.readInt();
+	dataInputStream.readFloat();
+	
+	System.out.println(name);
+	System.out.println(age);
+	System.out.println(salary);
+}
+  catch (FileNotFoundException e)//auto generate catch block
+	{
+		e.printStackTrace();
+	}
+	catch (IOException e)	
+	{
+		e.printStackTrace();
+	}
+   finally
+   {
+   	try
+   	{
+   		if(dataInputStream!=null)
+   			dataInputStream.close();
+   			
+   	    if(fileInputStream!=null)
+   				fileInputStream.close();	
+   	}
+   	catch (IOException e)
+   	{
+   	e.printStackTrace();	
+   	}
+   } }
+
+	
+	
+	public static void writeUsingDIS() {//writeUsingDIS VAPRLEY
+	DataOutputStream dataOutputStream =null;
+	 FileOutputStream fileOutputStream = null;//file ko'write'krney key liye
+  try {  
+	 fileOutputStream = new FileOutputStream("F:\\New folder\\demo.txt");//any location you want
+	dataOutputStream = new DataOutputStream(fileOutputStream);//data jo convert ho jayega usko hum 'fileoutputstream 'mey rakegey		 
+  
+	dataOutputStream.writeUTF("john");//this path la hey data save hoto
+	dataOutputStream.writeInt(55);
+	dataOutputStream.writeFloat(77.4f);
+	
+	System.out.println("file written");
+}
+  catch (FileNotFoundException e)//auto generate catch block
+	{
+		e.printStackTrace();
+	}
+	catch (IOException e)
+	{
+		e.printStackTrace();
+	}
+   finally
+   {
+   	try
+   	{
+   		if(dataOutputStream!=null)
+   			dataOutputStream.close();
+   			
+   	    if(fileOutputStream!=null)
+   				fileOutputStream.close();	
+   	}
+   	catch (IOException e)
+   	{
+   	e.printStackTrace();	
+   	}
+   } }
+  public static void decryption() {
+	  FileInputStream fileInputStream =null;
+		 FileOutputStream fileOutputStream = null; 
+	  
+	  try {
+		     File objFile = new File("F:\\New folder\\ECRYPTED FILE.enc");//'content' read karney key liye
+		     
+		     fileInputStream = new FileInputStream(objFile); //objFile mey path hey '14'ley pey path hey "F:\\New folder\\first1.txt"yesa bhi direct kr sktey hey kuch problem nahi
+		     fileOutputStream = new FileOutputStream("F:\\New folder\\DECRYPTED FILE1.txt");//data write karney key liye creat kiya hey
+		     
+		     byte [] data = new byte[(int)objFile.length()]; //jo bhi file ka size rahega utna byte[] rahega
+		     
+		     fileInputStream.read(data); //data byte are key form mey mila
+		     //dncrypted kelaa
+		     byte [] decData = new byte[data.length]; //new arrey created & data encrepted karney key liye
+		     
+		     for(int iTmp=0; iTmp<data.length;iTmp++)
+		     
+		    	 //data[iTmp]-=15;
+		    	 decData[iTmp] = (byte)(data[iTmp] - 15);//minius kelamuley dycrypted zala
+		     
+		     fileOutputStream.write(decData);
+		     System.out.println("file decrypted");
+		     
+		     }
+		catch (FileNotFoundException e)//auto generate catch block
+		{
+			e.printStackTrace();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			try {
+			if(fileInputStream!=null)
+				fileInputStream.close();
+			
+			if(fileOutputStream!=null)
+				fileOutputStream.close();
+			}
+		catch (IOException e)
+		{
+			e.printStackTrace();//auto generate catch block
+		}
+
+	}
+}}

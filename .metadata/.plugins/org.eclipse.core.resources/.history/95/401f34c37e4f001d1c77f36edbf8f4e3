@@ -1,0 +1,27 @@
+//15.Java program to get the element in a tree set which is greater than or equal to the given element
+
+package omassignment;
+
+import java.util.TreeSet;
+import java.util.Iterator;
+
+  public class Program15 {
+  public static void main(String[] args) {
+ 
+   TreeSet <Integer>num = new TreeSet<Integer>();
+   TreeSet <Integer>treeheadset = new TreeSet<Integer>();
+     
+   num.add(10);
+   num.add(22);
+   num.add(36);
+   num.add(25);
+   num.add(16);
+   num.add(70);
+   num.add(82);
+   num.add(89);
+   num.add(14);
+   
+   System.out.println("Greater than or equal to 86 : "+num.ceiling(86));
+   System.out.println("Greater than or equal to 29 : "+num.ceiling(29));
+   }    
+}

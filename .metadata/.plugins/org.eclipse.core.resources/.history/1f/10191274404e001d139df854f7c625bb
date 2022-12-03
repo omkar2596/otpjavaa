@@ -1,0 +1,24 @@
+//multithreading
+
+public class Program {
+
+	public static void main(String[] args) throws Exception {
+		IncrementThread  incThread = new IncrementThread();
+        incThread.setDaemon(true);//daeemon use to stop
+		incThread.start();
+        
+		DecrementThread  decThread = new DecrementThread();
+		Thread objThread = new Thread(decThread); 
+        objThread.setDaemon(true);//daeemon use to stop
+		objThread.start();
+		
+		for(int iTmp=0;iTmp<100;iTmp++)
+		{
+			System.out.println(".......main......");//main honey key baad program stop huwa
+			Thread.sleep(5);
+		}	 
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package employe.in;
+
+public class Engineer extends Employe {
+
+}

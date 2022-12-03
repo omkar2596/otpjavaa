@@ -1,0 +1,24 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		//synchronous call ....atapyat synchronous methode use keli ahe
+		increment();//increment call infinite loop
+		decrement();
+		
+		while(true)
+			System.out.println("Main");
+
+	}
+	static void increment()
+	{
+		for( int iTmp=0; iTmp<100;iTmp++);
+			System.out.println("increment");
+	}
+	static void decrement()
+	{
+		for( int iTmp=0; iTmp<100;iTmp++);
+		System.out.println("decrement");
+	}
+
+}

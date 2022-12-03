@@ -1,0 +1,10 @@
+package employe.in;
+
+public abstract class Employe {
+	protected String name;
+	protected String address;
+	protected int age;
+	protected boolean gender;
+	protected float basicSalary;
+
+}

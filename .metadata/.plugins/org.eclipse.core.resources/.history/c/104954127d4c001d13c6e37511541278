@@ -1,0 +1,61 @@
+//(ENCRYPTED FILE CONVERT INTO DECRYPTED FILE PROGRAM )
+
+import java.io.*;
+import java.io.FileInputStream;            //step 1-open notepad then "F:\\New folder\\first1.txt" save any path 'Jey program mdey declear kely ahe tey' (PROGRAM PATH AND NOTEPAD MDEY SAVE KELEY PATH SAME PAHJEY MG FILE DRYCTEPTED FILE DISNAR)
+import java.io.FileNotFoundException;      //step 2-run program 'file encrepted 'means run program succesful(JITEY FILE SAVE KELI AHE NA TITEY ANI EK FOLDER CREAT HOTO 'ENCREPTED')
+import java.io.FileOutputStream;
+
+public class Program {
+
+	public static void main(String[] args)    
+	{
+	     FileInputStream fileInputStream = null; //file ko read karney key liye
+	     FileOutputStream fileOutputStream = null;//file ko'write'krney key liye
+	     
+	     try {
+	     File objFile = new File("F:\\New folder\\first1.txt");//'content' read karney key liye
+	     
+	     fileInputStream = new FileInputStream(objFile); //objFile mey path hey '14'ley pey path hey "F:\\New folder\\first1.txt"yesa bhi direct kr sktey hey kuch problem nahi
+	     
+	     fileOutputStream = new FileOutputStream("F:\\New folder\\first2.enc");//data write karney key liye creat kiya hey
+	     
+	     byte [] data = new byte[(int)objFile.length()]; //jo bhi file ka size rahega utna byte[] rahega
+	     
+	     fileInputStream.read(data); //data byte are key form mey mila
+	     
+	     byte [] encData = new byte[data.length]; //new arrey created & data encrepted karney key liye
+	     
+	     for(int iTmp=0; iTmp<data.length;iTmp++)
+	     
+	    	 //data[iTmp]+=15;
+	    	 encData[iTmp] = (byte)(data[iTmp] + 15);
+	     
+	     fileOutputStream.write(encData);
+	     System.out.println("file encrypted");
+	     
+	     }
+	catch (FileNotFoundException e)//auto generate catch block
+	{
+		e.printStackTrace();
+	}
+	catch (IOException e)
+	{
+		e.printStackTrace();
+	}
+	finally
+	{
+		try {
+		if(fileInputStream!=null)
+			fileInputStream.close();
+		
+		if(fileOutputStream!=null)
+			fileOutputStream.close();
+		}
+	catch (IOException e)
+	{
+		e.printStackTrace();//auto generate catch block
+	}
+
+}
+ }
+	}

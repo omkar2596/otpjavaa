@@ -1,0 +1,31 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+
+public class Program {
+
+	public static void main(String[] args) {
+	     FileInputStream fileInputStream = null; //file ko read karney key liye
+	     FileOutputStream fileOutputStream = null;//file ko'write'krney key liye
+	     
+	     File objFile = new File("F:\\New folder\\first1.txt");//'content' read karney key liye
+	     
+	     fileInputStream = new FileInputStream(objFile); //objFile mey path hey '14'ley pey path hey "F:\\New folder\\first1.txt"yesa bhi direct kr sktey hey kuch problem nahi
+	     
+	     fileOutputStream = new FileOutputStream("F:\\New folder\\first2.txt");
+	     
+	     byte [] data = new byte[(int)objFile.length()]; //jo bhi file ka size rahega utna byte[] rahega
+	     
+	     fileInputStream.read(data); //data byte are key form mey mila
+	     
+	     byte [] encdata = new byte[data.length]; //new arrey created & data encrepted karney key liye
+	     
+	     
+	     
+         
+	}
+
+}

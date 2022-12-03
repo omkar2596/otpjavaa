@@ -1,0 +1,15 @@
+package cdac.in;
+
+import java.io.File;
+
+public class Program4 {
+
+	public static void main(String[] args) {
+		File objFile = new File("E:\\Images");
+		String [] fileNames = objFile.list();
+		for(String name : fileNames)
+			System.out.println(name);
+
+	}
+
+}
